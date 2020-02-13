@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No JavaScript Platform Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1 class="title"><span>No</span> JavaScript <span>Platform Game</span></h1>
+    <div class="center">
+      <input id="level-one" type="checkbox" />
+      <div class="level" l="1">
+        <div class="level-title">Level 1</div>
+        <div class="step start" r="0" c="0"></div>
+        <div class="step" r="0" c="1"></div>
+        <div class="step" r="1" c="1"></div>
+        <div class="step" r="2" c="1"></div>
+        <div class="step" r="3" c="1"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step" r="3" c="3"></div>
+        <div class="step" r="2" c="3"></div>
+        <div class="step" r="2" c="4"></div>
+        <div class="step" r="3" c="4"></div>
+        <div class="step finish" r="4" c="4">
+          <label class="goal" for="level-one"></label>
+        </div>
+      </div>
+      <input id="level-two" type="checkbox" />
+      <div class="level">
+        <div class="level-title">Level 2</div>
+        <div class="step start" r="4" c="4"></div>
+        <div class="step" r="4" c="3"></div>
+        <div class="step" r="4" c="2"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step" r="3" c="1"></div>
+        <div class="step" r="3" c="0"></div>
+        <div class="step" r="4" c="0"></div>
+        <div class="step" r="4" c="1"></div>
+        <div class="step" r="3" c="1"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step" r="3" c="3"></div>
+        <div class="step" r="4" c="3"></div>
+        <div class="step" r="4" c="2"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step" r="3" c="1"></div>
+        <div class="step" r="4" c="1"></div>
+        <div class="step" r="4" c="0"></div>
+        <div class="step" r="3" c="0"></div>
+        <div class="step" r="2" c="0"></div>
+        <div class="step" r="1" c="0"></div>
+        <div class="step finish" r="1" c="1">
+          <label class="goal" for="level-two"></label>
+        </div>
+      </div>
+      <input id="level-three" type="checkbox" />
+      <div class="level">
+        <div class="level-title">Level 3</div>
+        <div class="step start" r="1" c="1"></div>
+        <div class="step" r="1" c="2"></div>
+        <div class="step" r="1" c="3"></div>
+        <div class="path">
+          <div class="step" r="1" c="4"></div>
+          <div class="step" r="0" c="4"></div>
+          <div class="step" r="0" c="3"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="3" c="3"></div>
+          <div class="step" r="4" c="3"></div>
+          <div class="step" r="4" c="4"></div>
+        </div>
+        <div class="step" r="2" c="3"></div>
+        <div class="step" r="3" c="3"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step" r="3" c="1"></div>
+        <div class="step" r="3" c="0"></div>
+        <div class="step" r="2" c="0"></div>
+        <div class="step" r="1" c="0"></div>
+        <div class="step finish" r="0" c="0">
+          <label class="goal" for="level-three"></label>
+        </div>
+      </div>
+      <input id="level-four" type="checkbox" />
+      <div class="level">
+        <div class="level-title">Level 4</div>
+        <div class="step start" r="0" c="0"></div>
+        <div class="path">
+          <div class="step" r="0" c="1"></div>
+          <div class="step" r="0" c="2"></div>
+          <div class="path">
+            <div class="step" r="1" c="2"></div>
+            <div class="step" r="2" c="2"></div>
+            <div class="step" r="3" c="2"></div>
+            <div class="path">
+              <div class="step" r="3" c="3"></div>
+              <div class="step" r="2" c="3"></div>
+              <div class="step" r="1" c="3"></div>
+              <div class="step" r="1" c="4"></div>
+              <div class="step" r="2" c="4"></div>
+            </div>
+            <div class="step" r="3" c="1"></div>
+            <div class="step" r="3" c="0"></div>
+            <div class="step" r="2" c="0"></div>
+            <div class="step" r="2" c="1"></div>
+            <div class="step" r="2" c="2"></div>
+            <div class="step" r="1" c="2"></div>
+            <div class="step" r="1" c="3"></div>
+            <div class="step" r="0" c="3"></div>
+            <div class="step" r="0" c="4"></div>
+            <div class="step" r="1" c="4"></div>
+            <div class="step" r="2" c="4"></div>
+            <div class="step" r="3" c="4"></div>
+          </div>
+          <div class="step" r="0" c="3"></div>
+          <div class="step" r="0" c="4"></div>
+          <div class="step" r="1" c="4"></div>
+          <div class="path">
+            <div class="step" r="1" c="3"></div>
+            <div class="step" r="2" c="3"></div>
+            <div class="step" r="2" c="2"></div>
+            <div class="step" r="2" c="1"></div>
+            <div class="step" r="2" c="0"></div>
+            <div class="step" r="1" c="0"></div>
+          </div>
+          <div class="step" r="2" c="4"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="2" c="1"></div>
+          <div class="step" r="2" c="0"></div>
+          <div class="step" r="3" c="0"></div>
+          <div class="step" r="4" c="0"></div>
+          <div class="step" r="4" c="1"></div>
+          <div class="step" r="4" c="2"></div>
+          <div class="step" r="3" c="2"></div>
+        </div>
+        <div class="step" r="1" c="0"></div>
+        <div class="path">
+          <div class="step" r="1" c="1"></div>
+          <div class="step" r="1" c="2"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="1" c="2"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="1" c="2"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="1" c="2"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="1" c="2"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="1" c="2"></div>
+          <div class="step" r="1" c="3"></div>
+          <div class="step" r="2" c="3"></div>
+          <div class="step" r="2" c="2"></div>
+          <div class="step" r="1" c="2"></div>
+        </div>
+        <div class="step" r="2" c="0"></div>
+        <div class="step" r="3" c="0"></div>
+        <div class="step" r="4" c="0"></div>
+        <div class="step" r="4" c="1"></div>
+        <div class="step" r="4" c="2"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step" r="2" c="2"></div>
+        <div class="path">
+          <div class="step" r="2" c="1"></div>
+          <div class="step" r="2" c="0"></div>
+          <div class="step" r="3" c="0"></div>
+          <div class="step" r="4" c="0"></div>
+          <div class="step" r="4" c="1"></div>
+          <div class="step" r="4" c="2"></div>
+        </div>
+        <div class="step" r="1" c="2"></div>
+        <div class="step" r="0" c="2"></div>
+        <div class="step" r="0" c="3"></div>
+        <div class="step" r="1" c="3"></div>
+        <div class="step" r="1" c="4"></div>
+        <div class="step" r="0" c="4"></div>
+        <div class="step" r="0" c="3"></div>
+        <div class="step" r="1" c="3"></div>
+        <div class="step" r="2" c="3"></div>
+        <div class="step" r="2" c="2"></div>
+        <div class="step" r="3" c="2"></div>
+        <div class="step finish" r="4" c="4">
+          <label class="goal" for="level-four"></label>
+        </div>
+      </div>
+      <input id="level-five" type="checkbox" />
+      <div class="level">
+        <div class="level-title">Level 5</div>
+        <div class="step start" r="4" c="4"></div>
+        <div class="step" r="3" c="4"></div>
+        <div class="step" r="2" c="4">
+          <label class="button" for="bridge-one"></label>
+        </div>
+        <div class="bridge">
+          <input id="bridge-one" type="checkbox" />
+          <div class="step" r="1" c="4"></div>
+          <div class="step" r="0" c="4"></div>
+          <div class="step" r="0" c="3"></div>
+          <div class="path">
+            <div class="step" r="1" c="3"></div>
+            <div class="step" r="1" c="4"></div>
+            <div class="step" r="2" c="4"></div>
+            <div class="step" r="3" c="4"></div>
+            <div class="step" r="3" c="3"></div>
+            <div class="step" r="4" c="3"></div>
+            <div class="step" r="4" c="2"></div>
+            <div class="step" r="4" c="1"></div>
+            <div class="path">
+              <div class="step" r="3" c="1"></div>
+              <div class="step" r="3" c="0"></div>
+              <div class="step" r="2" c="0"></div>
+              <div class="step" r="1" c="0"></div>
+              <div class="step" r="0" c="0"></div>
+              <div class="step" r="0" c="1"></div>
+              <div class="path">
+                <div class="step" r="0" c="2"></div>
+                <div class="bridge">
+                  <input id="bridge-two" type="checkbox" />
+                  <div class="step" r="0" c="3"></div>
+                  <div class="step" r="0" c="4"></div>
+                  <div class="step" r="1" c="4"></div>
+                  <div class="step" r="2" c="4"></div>
+                  <div class="step" r="2" c="3"></div>
+                </div>
+              </div>
+              <div class="step" r="1" c="1"></div>
+              <div class="step" r="1" c="0">
+                <label class="button" for="bridge-three"></label>
+              </div>
+            </div>
+            <div class="step" r="4" c="0"></div>
+            <div class="step" r="3" c="0"></div>
+            <div class="step" r="3" c="1"></div>
+            <div class="step" r="4" c="1"></div>
+            <div class="step" r="4" c="2"></div>
+            <div class="step" r="4" c="3">
+              <label class="button" for="bridge-four"></label>
+            </div>
+          </div>
+          <div class="step" r="0" c="2"></div>
+          <div class="step" r="0" c="1"></div>
+          <div class="step" r="1" c="1"></div>
+          <div class="step" r="1" c="0"></div>
+          <div class="bridge">
+            <input id="bridge-four" type="checkbox" />
+            <div class="step" r="2" c="0"></div>
+            <div class="step" r="3" c="0"></div>
+            <div class="path">
+              <div class="step" r="4" c="0"></div>
+              <div class="step" r="4" c="1"></div>
+              <div class="step" r="4" c="2"></div>
+            </div>
+            <div class="step" r="3" c="1"></div>
+            <div class="step" r="4" c="1"></div>
+            <div class="step" r="4" c="0"></div>
+            <div class="bridge">
+              <input id="bridge-three" type="checkbox" />
+              <div class="step" r="3" c="0"></div>
+              <div class="step" r="2" c="0"></div>
+              <div class="step" r="1" c="0"></div>
+              <div class="step" r="0" c="0">
+                <label class="button" for="bridge-two"> </label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="step finish" r="2" c="2">
+          <label class="goal" for="level-five"></label>
+        </div>
+      </div>
+      <input id="finsh" type="checkbox" />
+      <div class="level win">
+        <div class="message">
+          <h1>YOU WIN!</h1>
+          <p>
+            Thanks for playing!<br />
+            Impressive patience!!
+          </p>
+          <a
+            class="share"
+            href="https://twitter.com/intent/tweet?url=https%3A%2F%2FYouTube.com%2FcodeSTACKr&via=codeSTACKr&text=I%20made%20it%20to%20the%20end%20of%20this%20pure%20CSS%20game.%20I%20bet%20you%20can%27t%21&hashtags=codeSTACKr%2Cjavascript%2Ccss%2Chtml"
+            target="_blank"
+            >Brag on Twitter!</a
+          >
+        </div>
+      </div>
+    </div>
+    <a class="signature" href="https://YouTube.com/codeSTACKr" target="_blank"
+      >codeSTACKr</a
+    >
+  </body>
+</html>

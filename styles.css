@@ -1,0 +1,451 @@
+@import url("https://fonts.googleapis.com/css?family=Quicksand|Russo+One&display=swap");
+.title {
+  position: relative;
+  margin-top: 4rem;
+  margin-left: 2rem;
+  padding-left: 1rem;
+  font-size: 5rem;
+  background-color: #000;
+  z-index: -2;
+}
+
+.title span:first-of-type {
+  display: inline-block;
+  position: relative;
+  color: #854752;
+  font-family: "Russo One", sans-serif;
+  font-size: 8rem;
+}
+
+.title span:first-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 1.8rem;
+  height: 1rem;
+  width: 11rem;
+  background: rgba(255, 255, 255, 0.9);
+  z-index: -1;
+}
+
+.title span:last-of-type {
+  display: inline-block;
+  position: relative;
+}
+
+.title span:last-of-type::before {
+  content: "";
+  position: absolute;
+  bottom: 0.5rem;
+  height: 5rem;
+  width: 36rem;
+  background: #854752;
+  z-index: -1;
+}
+
+.level {
+  -webkit-transition: opacity 600ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 600ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 600ms cubic-bezier(0.23, 1, 0.32, 1), opacity 600ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 600ms cubic-bezier(0.23, 1, 0.32, 1);
+  opacity: 0;
+  -webkit-transform: translateY(-20rem) translateX(20rem);
+          transform: translateY(-20rem) translateX(20rem);
+  pointer-events: none;
+}
+
+.level[l="1"] {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0) translateX(0);
+          transform: translateY(0) translateX(0);
+}
+
+.level:hover .finish {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity 200ms linear, -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 200ms linear, -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms linear;
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms linear, -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.level-title {
+  position: absolute;
+  top: -20rem;
+  left: -20rem;
+  font-family: "Russo One", sans-serif;
+  font-size: 10rem;
+}
+
+input {
+  opacity: 0;
+  pointer-events: none;
+}
+
+input:checked + .level + input + .level {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: translateY(0) translateX(0);
+          transform: translateY(0) translateX(0);
+}
+
+input:checked + .level {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  -webkit-transform: translateY(20rem) translateX(-20rem) !important;
+          transform: translateY(20rem) translateX(-20rem) !important;
+}
+
+.button,
+.goal {
+  position: absolute;
+  top: 5%;
+  left: 20%;
+  width: 75%;
+  height: 75%;
+  border-radius: 10rem;
+  background: #4763eb;
+  text-align: center;
+  line-height: 8rem;
+  -webkit-box-shadow: -0.5rem 0.5rem 0.5rem #b8ad7a;
+          box-shadow: -0.5rem 0.5rem 0.5rem #b8ad7a;
+  -webkit-transition: -webkit-box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: url(stick-figure-64.svg), pointer;
+}
+
+.button:hover,
+.goal:hover {
+  -webkit-transform: translateX(0.5rem) translateY(-0.5rem);
+          transform: translateX(0.5rem) translateY(-0.5rem);
+  -webkit-box-shadow: -2rem 2rem 3rem #b8ad7a;
+          box-shadow: -2rem 2rem 3rem #b8ad7a;
+}
+
+.button:active,
+.goal:active {
+  -webkit-transform: translateX(-0.5rem) translateY(0.5rem);
+          transform: translateX(-0.5rem) translateY(0.5rem);
+  -webkit-box-shadow: 0rem 0rem 0rem #b8ad7a;
+          box-shadow: 0rem 0rem 0rem #b8ad7a;
+}
+
+.button {
+  background: #d1dbbd;
+}
+
+input:checked + .button {
+  pointer-events: none;
+  -webkit-transform: translateX(-0.5rem) translateY(0.5rem);
+          transform: translateX(-0.5rem) translateY(0.5rem);
+  -webkit-box-shadow: 0rem 0rem 0rem #b8ad7a;
+          box-shadow: 0rem 0rem 0rem #b8ad7a;
+}
+
+#level-one {
+  position: absolute;
+  z-index: 10000;
+}
+
+.step {
+  width: 10.1rem;
+  height: 10.1rem;
+  background: #d1dbbd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transform: translateY(5rem) translateX(-5rem);
+          transform: translateY(5rem) translateX(-5rem);
+  pointer-events: none;
+  -webkit-transition: opacity 600ms linear, -webkit-transform 600ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: opacity 600ms linear, -webkit-transform 600ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  transition: transform 600ms cubic-bezier(0.755, 0.05, 0.855, 0.06), opacity 600ms linear;
+  transition: transform 600ms cubic-bezier(0.755, 0.05, 0.855, 0.06), opacity 600ms linear, -webkit-transform 600ms cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  cursor: url(stick-figure-64.svg), pointer;
+}
+
+.step::before, .step::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none !important;
+}
+
+.step::before {
+  left: -20%;
+  background: #a67359;
+  -webkit-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+  -webkit-transform: skewy(-45deg);
+          transform: skewy(-45deg);
+  width: 20%;
+}
+
+.step::after {
+  top: 100%;
+  background: #b8ad7a;
+  -webkit-transform-origin: 0% 0%;
+          transform-origin: 0% 0%;
+  -webkit-transform: skewX(-45deg);
+          transform: skewX(-45deg);
+  height: 20%;
+}
+
+.step.start::before, .step.finish::before {
+  left: -50%;
+  width: 50%;
+}
+
+.step.start::after, .step.finish::after {
+  height: 50%;
+}
+
+.step.start, .step:hover,
+.step:hover + .step,
+.step:hover + .path > .step:first-child,
+.step:hover + .path + .step,
+.step:hover + .bridge > input:checked + .step,
+.step:hover + .bridge > input:not(:checked) + .step + .step {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transition: opacity 200ms linear, -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: opacity 200ms linear, -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms linear;
+  transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms linear, -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.step[r="1"] {
+  top: 10rem;
+}
+
+.step[r="2"] {
+  top: 20rem;
+}
+
+.step[r="3"] {
+  top: 30rem;
+}
+
+.step[r="4"] {
+  top: 40rem;
+}
+
+.step[c="1"] {
+  left: 10rem;
+}
+
+.step[c="2"] {
+  left: 20rem;
+}
+
+.step[c="3"] {
+  left: 30rem;
+}
+
+.step[c="4"] {
+  left: 40rem;
+}
+
+.step[c="0"][r="0"] {
+  z-index: 5;
+}
+
+.step[c="1"][r="0"] {
+  z-index: 4;
+}
+
+.step[c="2"][r="0"] {
+  z-index: 3;
+}
+
+.step[c="3"][r="0"] {
+  z-index: 2;
+}
+
+.step[c="4"][r="0"] {
+  z-index: 1;
+}
+
+.step[c="0"][r="1"] {
+  z-index: 10;
+}
+
+.step[c="1"][r="1"] {
+  z-index: 8;
+}
+
+.step[c="2"][r="1"] {
+  z-index: 6;
+}
+
+.step[c="3"][r="1"] {
+  z-index: 4;
+}
+
+.step[c="4"][r="1"] {
+  z-index: 2;
+}
+
+.step[c="0"][r="2"] {
+  z-index: 15;
+}
+
+.step[c="1"][r="2"] {
+  z-index: 12;
+}
+
+.step[c="2"][r="2"] {
+  z-index: 9;
+}
+
+.step[c="3"][r="2"] {
+  z-index: 6;
+}
+
+.step[c="4"][r="2"] {
+  z-index: 3;
+}
+
+.step[c="0"][r="3"] {
+  z-index: 20;
+}
+
+.step[c="1"][r="3"] {
+  z-index: 16;
+}
+
+.step[c="2"][r="3"] {
+  z-index: 12;
+}
+
+.step[c="3"][r="3"] {
+  z-index: 8;
+}
+
+.step[c="4"][r="3"] {
+  z-index: 4;
+}
+
+.step[c="0"][r="4"] {
+  z-index: 25;
+}
+
+.step[c="1"][r="4"] {
+  z-index: 20;
+}
+
+.step[c="2"][r="4"] {
+  z-index: 15;
+}
+
+.step[c="3"][r="4"] {
+  z-index: 10;
+}
+
+.step[c="4"][r="4"] {
+  z-index: 5;
+}
+
+.bridge {
+  pointer-events: none;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50rem;
+  height: 50rem;
+  -webkit-transform: perspective(100rem) translate3d(-50%, -50%, 0) rotateZ(-45deg);
+          transform: perspective(100rem) translate3d(-50%, -50%, 0) rotateZ(-45deg);
+}
+
+html {
+  font-size: 1.2vh;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background: #854752;
+  color: white;
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-size: 10rem;
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+}
+
+.win {
+  display: block;
+  -webkit-transform: translate(-10%, -30%) !important;
+          transform: translate(-10%, -30%) !important;
+}
+
+.share {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  padding: 2rem;
+  border-radius: 5rem;
+  background: #4763eb;
+  color: white;
+  -webkit-box-shadow: -0.5rem 0.5rem 0.5rem #63363d;
+          box-shadow: -0.5rem 0.5rem 0.5rem #63363d;
+  -webkit-transition: -webkit-box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: -webkit-box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  transition: box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), transform 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-box-shadow 200ms cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  cursor: pointer;
+}
+
+.share:hover {
+  -webkit-transform: translateX(0.5rem) translateY(-0.5rem);
+          transform: translateX(0.5rem) translateY(-0.5rem);
+  -webkit-box-shadow: -1.5rem 1.5rem 2.5rem #63363d;
+          box-shadow: -1.5rem 1.5rem 2.5rem #63363d;
+}
+
+.share:active {
+  -webkit-transform: translateX(-0.5rem) translateY(0.5rem);
+          transform: translateX(-0.5rem) translateY(0.5rem);
+  -webkit-box-shadow: 0rem 0rem 0rem #63363d;
+          box-shadow: 0rem 0rem 0rem #63363d;
+}
+
+.message {
+  -webkit-transform: rotate(45deg) translatey(-10rem);
+          transform: rotate(45deg) translatey(-10rem);
+  text-align: center;
+  width: 40rem;
+}
+
+.signature {
+  position: fixed;
+  bottom: 2rem;
+  right: 4rem;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 100;
+  font-family: sans-serif;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 2px;
+}
